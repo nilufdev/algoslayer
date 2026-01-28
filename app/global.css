@@ -1,22 +1,22 @@
 @import 'tailwindcss';
 
-/* Hide the duplicate math text */
+/* 1. Fix the "jumping to new line" for small variables */
 .katex-html {
-  display: block;
+  display: inline-block;
 }
 
-/* This ensures "Block Math" actually takes up its own line and centers */
+/* 2. Hide the duplicate text causing the 'NN' or 'AA' look */
+.katex-mathml {
+  display: none !important;
+}
+
+/* 3. Ensure big formulas (using $$) are centered and on their own line */
 .katex-display {
   display: block;
   margin: 1.5rem 0;
   text-align: center;
   width: 100%;
-  overflow-x: auto; /* Prevents long formulas from breaking your mobile layout */
-}
-
-/* This hides the "double text" you saw earlier */
-.katex-mathml {
-  display: none;
+  overflow-x: auto;
 }
 
 ::selection {
