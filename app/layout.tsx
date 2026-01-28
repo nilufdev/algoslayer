@@ -1,3 +1,4 @@
+import 'katex/dist/katex.min.css' // This MUST be here
 import './global.css'
 import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
