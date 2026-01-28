@@ -11,8 +11,11 @@ export async function generateStaticParams() {
   }))
 }
 
-export function generateMetadata({ params }) {
-  let post = getBlogPosts().find((post) => post.slug === params.slug)
+// Fixed: Added 'async' and 'await params'
+export async function generateMetadata({ params }) {
+  const { slug } = await params
+  let post = getBlogPosts().find((post) => post.slug === slug)
+  
   if (!post) {
     return
   }
@@ -51,8 +54,10 @@ export function generateMetadata({ params }) {
   }
 }
 
-export default function Blog({ params }) {
-  let post = getBlogPosts().find((post) => post.slug === params.slug)
+// Fixed: Changed to 'async' and 'await params'
+export default async function Blog({ params }) {
+  const { slug } = await params
+  let post = getBlogPosts().find((post) => post.slug === slug)
 
   if (!post) {
     notFound()
