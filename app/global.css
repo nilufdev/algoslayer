@@ -1,5 +1,14 @@
 @import 'tailwindcss';
 
+/* Hide the duplicate math text */
+.katex-html {
+  display: block;
+}
+
+.katex-mathml {
+  display: none;
+}
+
 ::selection {
   background-color: #47a3f3;
   color: #fefefe;
