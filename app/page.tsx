@@ -7,7 +7,7 @@ export default function Page() {
         Algoslayer Archive
       </h1>
       <p className="mb-4">
-        {`Welcome to the official problem repository for the Algoslayer coding events at Thejus Engineering College. Select an event below to access the problem statements and editorial breakdowns for that year.`}
+        {`Welcome to the official problem repository for the Algoslayer coding event @ Thejus Engineering College. Select an event below to access the problem statements and editorial breakdowns for that year.`}
       </p>
       <div className="my-8">
         <BlogPosts />
