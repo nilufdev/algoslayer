@@ -5,8 +5,17 @@
   display: block;
 }
 
+
+/* This hides the "duplicate" plain text version */
 .katex-mathml {
   display: none;
+}
+
+/* This ensures math is properly spaced */
+.katex-display {
+  margin: 1em 0;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 ::selection {
