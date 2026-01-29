@@ -1,31 +1,24 @@
 ---
 title: 'Sample Problems'
-publishedAt: '2026-02-01'
-summary: 'get hands dirty by solving some sample problems'
+publishedAt: '2026-01-29'
+summary: 'Get your hands dirty by solving some sample competitive programming problems.'
 ---
 
-### Problem A
+### Problem A: RGB Cards
 
-We have an $N \times N$ square grid.
-
-We will paint each square in the grid either black or white.
-
-If we paint exactly $A$ squares white, how many squares will be painted black?
+We have an $N \times N$ square grid. We will paint each square in the grid either black or white. If we paint exactly $A$ squares white, how many squares will be painted black?
 
 ## Constraints
 
 * $1 \le N \le 100$
 * $0 \le A \le N^2$
 
-## Inputs
+## Input
 
 Input is given from Standard Input in the following format:
 
 $N$
 $A$
-
-## Outputs
-Print the number of squares that will be painted black.
 
 ## Solution
 
@@ -33,28 +26,22 @@ An $N \times N$ grid contains a total of $N^2$ squares. Since we are painting $A
 
 Therefore, the solution is to read $N$ and $A$ from the input and output the result of $N^2 - A$.
 
-![Example Grid](/images/problem-A.png)
-
-Here we can see that the cells we color doesn't matter, only the number of cells colored matters
-
-### Problem B
-
-You are given an integer sequence of length $N, A = (A_1, A_2, \dots, A_N)$, and an integer $M$.
-
-Determine whether it is possible to remove one of the $N$ elements of $A$ so that the sum of the remaining $(N - 1)$ elements is exactly $M$.
+![Solution Grid](/images/problem-A.png)
 
 ---
 
-### Constraints
+### Problem B: Subset Sum Check
 
-* $2 \leq N \leq 100$
-* $0 \leq M \leq 10000$
-* $0 \leq A_i \leq 100$
+You are given an integer sequence of length $N, A = (A_1, A_2, \dots, A_N)$, and an integer $M$. Determine whether it is possible to remove one of the $N$ elements of $A$ so that the sum of the remaining $(N - 1)$ elements is exactly $M$.
+
+## Constraints
+
+* $2 \le N \le 100$
+* $0 \le M \le 10000$
+* $0 \le A_i \le 100$
 * All input values are integers.
 
----
-
-### Input
+## Input
 
 The input is given from Standard Input in the following format:
 
@@ -65,9 +52,10 @@ $$
 \end{aligned}
 $$
 
-
----
-
-### Output
+## Output
 
 If it is possible to remove one of the $N$ elements of $A$ so that the sum of the remaining $(N - 1)$ elements is exactly $M$, print `Yes`; otherwise, print `No`.
+
+## Solution Hint
+
+To solve this, calculate the total sum of the array $S$. Then, iterate through each element $A_i$. If there exists an $A_i$ such that $S - A_i = M$, the answer is `Yes`.
