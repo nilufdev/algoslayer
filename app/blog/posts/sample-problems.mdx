@@ -1,6 +1,40 @@
 ---
 title: 'Sample Problems'
 publishedAt: '2026-01-29'
+summary: 'Get your hands dirty'
+---
+
+### Problem A
+
+We have an $N \times N$ square grid. We will paint each square in the grid either black or white. If we paint exactly $A$ squares white, how many squares will be painted black?
+
+## Constraints
+
+* $1 \le N \le 100$
+* $0 \le A \le N^2$
+
+## Input
+
+Input is given from Standard Input in the following format:
+
+$N$
+$A$
+
+## Solution
+
+An $N \times N$ grid contains a total of $N^2$ squares. Since we are painting $A$ of those squares white, the number of squares to be painted black is $N^2 - A$.
+
+Therefore, the solution is to read $N$ and $A$ from the input and output the result of $N^2 - A$.
+
+![Solution Grid](/images/problem-A.png)
+
+---
+
+### Problem B
+
+---
+title: 'Sample Problems'
+publishedAt: '2026-01-29'
 summary: 'Get your hands dirty by solving some sample competitive programming problems.'
 ---
 
@@ -32,7 +66,9 @@ Therefore, the solution is to read $N$ and $A$ from the input and output the res
 
 ### Problem B: Subset Sum Check
 
-You are given an integer sequence of length $N, A = (A_1, A_2, \dots, A_N)$, and an integer $M$. Determine whether it is possible to remove one of the $N$ elements of $A$ so that the sum of the remaining $(N - 1)$ elements is exactly $M$.
+You are given an integer sequence of length $N$, $A = (A_1, A_2, \dots, A_N)$, and an integer $M$.
+
+Determine whether it is possible to remove one of the $N$ elements of $A$ so that the sum of the remaining $(N - 1)$ elements is exactly $M$.
 
 ## Constraints
 
@@ -45,17 +81,13 @@ You are given an integer sequence of length $N, A = (A_1, A_2, \dots, A_N)$, and
 
 The input is given from Standard Input in the following format:
 
-$$
-\begin{aligned}
-&N \quad M \\
-&A_1 \quad A_2 \quad \dots \quad A_N
-\end{aligned}
-$$
+$N \quad M$
+$A_1 \quad A_2 \quad \dots \quad A_N$
 
 ## Output
 
 If it is possible to remove one of the $N$ elements of $A$ so that the sum of the remaining $(N - 1)$ elements is exactly $M$, print `Yes`; otherwise, print `No`.
 
-## Solution Hint
+## Solution
 
-To solve this, calculate the total sum of the array $S$. Then, iterate through each element $A_i$. If there exists an $A_i$ such that $S - A_i = M$, the answer is `Yes`.
+To solve this, calculate the total sum $S$ of all elements in $A$. For each element $A_i$, check if $S - A_i = M$. If this condition holds for any $i$, the answer is `Yes`.
