@@ -4,7 +4,7 @@ publishedAt: '2026-02-01'
 summary: 'get hands dirty by solving some sample problems'
 ---
 
-### Problem A (100 Points)
+### Problem A
 
 We have an $N \times N$ square grid.
 
@@ -24,12 +24,50 @@ Input is given from Standard Input in the following format:
 $N$
 $A$
 
+## Outputs
+Print the number of squares that will be painted black.
+
 ## Solution
 
 An $N \times N$ grid contains a total of $N^2$ squares. Since we are painting $A$ of those squares white, the number of squares to be painted black is $N^2 - A$.
 
 Therefore, the solution is to read $N$ and $A$ from the input and output the result of $N^2 - A$.
 
-![Solution Grid](/images/problem-A.png)
+![Example Grid](/images/problem-A.png)
 
 Here we can see that the cells we color doesn't matter, only the number of cells colored matters
+
+### Problem B
+
+You are given an integer sequence of length $N, A = (A_1, A_2, \dots, A_N)$, and an integer $M$.
+
+Determine whether it is possible to remove one of the $N$ elements of $A$ so that the sum of the remaining $(N - 1)$ elements is exactly $M$.
+
+---
+
+### Constraints
+
+* $2 \leq N \leq 100$
+* $0 \leq M \leq 10000$
+* $0 \leq A_i \leq 100$
+* All input values are integers.
+
+---
+
+### Input
+
+The input is given from Standard Input in the following format:
+
+$$
+\begin{aligned}
+&N \quad M \\
+&A_1 \quad A_2 \quad \dots \quad A_N
+\end{aligned}
+$$
+
+
+---
+
+### Output
+
+If it is possible to remove one of the $N$ elements of $A$ so that the sum of the remaining $(N - 1)$ elements is exactly $M$, print `Yes`; otherwise, print `No`.
