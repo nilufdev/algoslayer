@@ -52,9 +52,4 @@ If it is possible to remove one of the $N$ elements of $A$ so that the sum of th
 
 ## Solution
 
-Let $A_k$ be the element being removed. Then the remaining $(N - 1)$ elements sum to $\sum\limits_{i=1}^{N} A_i - A_k$. We want to determine if this value evaluates to $M$ for some $k$.
-
-This condition is equivalent to:  
-$A_k = \sum\limits_{i=1}^{N} A_i - M$
-
-Therefore, it is sufficient to check the existence of such $k$ in the sequence.
+We can calculate the total sum $S$ of all elements in $A$. For each element $A_i$, check if $S - A_i = M$. If this condition holds for any $i$, the answer is `Yes`.
