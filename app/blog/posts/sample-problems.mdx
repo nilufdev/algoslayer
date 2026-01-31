@@ -34,6 +34,18 @@ total = N * N
 print(total - A)
 ```
 
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+  int N, A;
+  cin >> N >> A;
+  int total = N * N;
+  cout << total - A;
+}
+```
+
 ### Problem B
 
 You are given an integer sequence of length $N$, $A = (A_1, A_2, \dots, A_N)$, and an integer $M$.
@@ -81,4 +93,34 @@ if found:
   print('Yes')
 else:
   print('No')
+```
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+  int n, m;
+  cin >> n >> m;
+  int a[n];
+  int sum = 0;
+  for(int i = 0; i < n; ++i) {
+    cin >> a[i];
+    sum += a[i];
+  }
+
+  bool found = false;
+  for(int x : a) {
+    if(sum - x == m) {
+      found = true;
+    }
+  }
+
+  if(found) {
+    cout << "Yes";
+  }
+  else {
+    cout << "No";
+  }
+}
 ```
