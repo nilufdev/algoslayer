@@ -17,7 +17,7 @@ We have an $N \times N$ square grid. We will paint each square in the grid eithe
 
 Input is given from Standard Input in the following format:
 
-$N$
+$N$  
 $A$
 
 ## Solution
@@ -25,6 +25,14 @@ $A$
 An $N \times N$ grid contains a total of $N^2$ squares. Since we are painting $A$ of those squares white, the number of squares to be painted black is $N^2 - A$.
 
 Therefore, the solution is to read $N$ and $A$ from the input and output the result of $N^2 - A$.
+
+```python
+N = int(input())
+A = int(input())
+
+total = N * N # total number of cells in the grid
+print(total - A) # total - colored
+```
 
 ### Problem B
 
