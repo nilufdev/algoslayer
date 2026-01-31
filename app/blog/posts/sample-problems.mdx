@@ -30,8 +30,8 @@ Therefore, the solution is to read $N$ and $A$ from the input and output the res
 N = int(input())
 A = int(input())
 
-total = N * N # total number of cells in the grid
-print(total - A) # total - colored
+total = N * N
+print(total - A)
 ```
 
 ### Problem B
@@ -66,17 +66,16 @@ We can calculate the total sum $S$ of all elements in $A$. Then for each element
 N, M = map(int, input().split())
 A = list(map(int, input().split()))
 
-S = 0 # sum of elements in A
+S = 0
 for x in A:
   S += x
 
-found = False # we don't have any solution so far
+found = False
 
-# we consider to remove every element
 for x in A:
-  if S-x == M: # if we removed x from A, remaining sum is compared with M
-    found = True # we found a solution
-    break # no need to look further
+  if S-x == M:
+    found = True
+    break
   
 if found:
   print('Yes')
