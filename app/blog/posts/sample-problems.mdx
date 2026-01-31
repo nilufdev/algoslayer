@@ -61,3 +61,25 @@ If it is possible to remove one of the $N$ elements of $A$ so that the sum of th
 ## Solution
 
 We can calculate the total sum $S$ of all elements in $A$. Then for each element we can check if we removed that item then sum of remaining items is exactly $M$ or not by doing $S - A_i$, and print answer is `Yes` if it's equal to $M$.
+
+```python
+N, M = map(int, input().split())
+A = list(map(int, input().split()))
+
+S = 0 # sum of elements in A
+for x in A:
+  S += x
+
+found = False # we don't have any solution so far
+
+# we consider to remove every element
+for x in A:
+  if S-x == M: # if we removed x from A, remaining sum is compared with M
+    found = True # we found a solution
+    break # no need to look further
+  
+if found:
+  print('Yes')
+else:
+  print('No')
+```
